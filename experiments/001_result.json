@@ -1,0 +1,13 @@
+{
+  "id": "35d39ba2d4ccecd4",
+  "source": "KIJI",
+  "source_commit": "dbe92a4b2a4866c96d343e45378ca09018687073",
+  "technique": "evidence-over-narration",
+  "action": "stolen-by-FROG",
+  "outcome": "first-independent-experiment",
+  "verification": {
+    "same_semantic_record_different_key_order": "same_id",
+    "status": "passed"
+  },
+  "next_leap": "steal an executable KIJI technique when the implementation is mirrored"
+}
