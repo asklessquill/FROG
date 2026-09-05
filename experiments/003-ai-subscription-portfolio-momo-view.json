@@ -1,0 +1,123 @@
+{
+  "experiment": "003-ai-subscription-portfolio",
+  "observed_at": "2026-09-06T02:48:25+09:00",
+  "question": "Around JPY 30,000/month, does one-provider concentration or multi-provider diversification create more usable work capacity for the current World SE workflow?",
+  "momo_pattern_reused": {
+    "source": {
+      "repository": "asklessquill/MOMO-Observatory",
+      "branch": "main",
+      "revision": "8eab8ecfeb595b2d9764a666c41c67211ba8a747",
+      "path": "schema/observatory-state.schema.json"
+    },
+    "borrowed_semantics": [
+      "human-scale current meaning",
+      "next natural action instead of internal task list",
+      "human_attention only for a decision Human must make now",
+      "explicit risk",
+      "observed_at",
+      "source and evidence references"
+    ],
+    "note": "Adapted pattern only; this is not a MOMO/KIBI contract or canonical state."
+  },
+  "fx_reference": {
+    "usd_jpy": 156.595,
+    "captured_in_chat": "2026-09-06",
+    "note": "Used only for approximate portfolio comparison; provider billing tax/localization can differ."
+  },
+  "verified_plan_facts": [
+    {
+      "provider": "OpenAI",
+      "plan": "ChatGPT Plus",
+      "price": "$20/month"
+    },
+    {
+      "provider": "OpenAI",
+      "plan": "ChatGPT Pro $100",
+      "price": "$100/month",
+      "capacity": "5x Plus usage; same Pro core capabilities as $200 tier"
+    },
+    {
+      "provider": "OpenAI",
+      "plan": "ChatGPT Pro $200",
+      "price": "$200/month",
+      "capacity": "20x Plus usage"
+    },
+    {
+      "provider": "Cursor",
+      "plan": "Pro / Pro+ / Ultra",
+      "price": "$20 / $60 / $200 per month",
+      "capacity": "Pro+ has 3x Pro agent limit; Ultra has 20x Pro agent limit"
+    },
+    {
+      "provider": "Anthropic",
+      "plan": "Claude Pro / Max 5x / Max 20x",
+      "price": "$20 / $100 / $200 per month",
+      "capacity": "standard / 5x Pro / 20x Pro"
+    },
+    {
+      "provider": "Perplexity",
+      "plan": "Pro / Max",
+      "price": "$20 / $200 per month",
+      "capacity": "Pro gives advanced-model research access; Max gives highest access and 10,000 Computer credits/month"
+    },
+    {
+      "provider": "Google",
+      "plan": "Google AI Pro",
+      "price": "JPY 2,900/month",
+      "capacity": "4x free usage limit plus Gemini/Deep Research/Google integration"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "A-single-provider",
+      "monthly_cost_approx_jpy": 31319,
+      "examples": [
+        "ChatGPT Pro $200",
+        "Claude Max 20x $200",
+        "Cursor Ultra $200"
+      ],
+      "strength": "Maximum headroom inside one execution family; lowest switching overhead.",
+      "weakness": "One quota/failure domain and one provider worldview; the chosen provider must cover every major lane well.",
+      "fit_for_current_world_se": "Conditional: attractive only after one lane is proven to be the dominant bottleneck."
+    },
+    {
+      "id": "B-five-provider",
+      "monthly_cost_approx_jpy": 27955,
+      "allocation": [
+        "ChatGPT Pro $100",
+        "Claude Pro $20",
+        "Cursor Pro $20",
+        "Perplexity Pro $20",
+        "Google AI Pro JPY 2,900"
+      ],
+      "strength": "Maximum model/provider diversity, independent fallback lanes, broad research/coding/ecosystem coverage.",
+      "weakness": "High overlap and Human/tool switching cost; coding headroom remains only Cursor Pro while money is spent on several overlapping general/research assistants.",
+      "fit_for_current_world_se": "Better continuity than one-provider concentration, but likely over-diversified."
+    },
+    {
+      "id": "C-three-lane",
+      "monthly_cost_approx_jpy": 27955,
+      "allocation": [
+        "ChatGPT Pro $100",
+        "Cursor Pro+ $60",
+        "Google AI Pro JPY 2,900"
+      ],
+      "strength": "Same approximate spend as B, but concentrates capacity into the three observed lanes: upper reasoning/research, implementation, and Google ecosystem/second-model path.",
+      "weakness": "Less direct Claude/Perplexity access; cross-model review breadth is narrower unless accessed through Cursor or free/on-demand routes.",
+      "fit_for_current_world_se": "Best current structural fit before real monthly telemetry proves otherwise."
+    }
+  ],
+  "status": "ACTIVE",
+  "current": "The original one-provider-vs-five-provider choice is probably the wrong abstraction. At nearly identical spend, a three-lane portfolio preserves provider diversity while putting more capacity into the currently observed bottlenecks and reducing Human switching cost.",
+  "risk": "This is a structural allocation experiment based on verified entitlements plus current workflow evidence, not a month-long measured throughput benchmark. Actual value depends on task mix, model limits, taxes, and how often each lane saturates.",
+  "next": "Use real limit events and completed-work evidence for one billing cycle. Upgrade only the lane that repeatedly blocks useful work; remove subscriptions that do not change outcomes.",
+  "human_attention": "Do not buy five subscriptions merely to maximize coverage. If spending roughly JPY 30,000 now, test the three-lane allocation before jumping to a single $200 tier or a five-provider portfolio.",
+  "evidence_refs": [
+    "OpenAI Help: ChatGPT Pro tiers ($100=5x Plus; $200=20x Plus)",
+    "Cursor pricing/docs: Pro $20; Pro+ $60=3x; Ultra $200=20x",
+    "Claude Help: Pro $20; Max 5x $100; Max 20x $200",
+    "Perplexity pricing/help: Pro $20; Max $200; Max Computer credits",
+    "Google Gemini subscriptions: Google AI Pro JPY 2,900/month",
+    "MOMO-Observatory schema/observatory-state.schema.json @ 8eab8ecfeb595b2d9764a666c41c67211ba8a747"
+  ]
+}
