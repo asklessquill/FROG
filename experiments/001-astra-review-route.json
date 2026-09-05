@@ -1,0 +1,47 @@
+{
+  "experiment": "001-astra-review-route",
+  "date": "2026-09-06",
+  "borrowed_capability": {
+    "from": "asklessquill/Kiji",
+    "branch": "codex/autonomous-continuation",
+    "source_path": "src/thought_flow/research/world_experience.py",
+    "source_commit": "c82f0989801e48bbd72999d03ab852a937475452",
+    "behavior_used": "question-scoped route selection from observed outcomes",
+    "private_source_copied_to_FROG": false
+  },
+  "real_question": "Where should an Astra review watch look first for hands-on user experience?",
+  "observed_routes": [
+    {
+      "route": "official",
+      "outcome": "zero",
+      "useful_evidence_count": 0,
+      "observation": "Useful for release/product facts, but the search produced no hands-on user-review evidence for this question kind."
+    },
+    {
+      "route": "general_web",
+      "outcome": "partial",
+      "useful_evidence_count": 1,
+      "observation": "Produced current reporting and synthesis, but little first-hand usage evidence."
+    },
+    {
+      "route": "reddit",
+      "outcome": "succeeded",
+      "useful_evidence_count": 5,
+      "observation": "Produced multiple current first-hand Plus/Pro/Codex reports on Astra speed, quality, intuition and usage-limit cost."
+    }
+  ],
+  "kiji_route_result": "reddit",
+  "immediate_use": {
+    "hands_on_reviews": "reddit-first",
+    "release_and_access_facts": "official-first",
+    "cross-check_and_synthesis": "general-web-second",
+    "rule": "Do not use one universal source order; route by question kind and change route when recent evidence degrades."
+  },
+  "public_evidence": [
+    "https://www.reddit.com/r/OpenAI/comments/1w7qxdr/astra_gpt6_high_intelligence_low_intuition/",
+    "https://www.reddit.com/r/codex/comments/1w7uj5i/gpt_6_astra_is_genuinely_unusuable_on_plus/",
+    "https://www.reddit.com/r/codex/comments/1w7kvf7/gpt6_astra_wow/",
+    "https://www.reddit.com/r/codex/comments/1w7eu6n/gpt6_astra_is_blazingly_fast/",
+    "https://www.reddit.com/r/codex/comments/1w6jh9e/astra_is_good_but_maybe_we_should_calm_down_with/"
+  ]
+}
