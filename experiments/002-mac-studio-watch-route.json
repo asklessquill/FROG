@@ -1,0 +1,62 @@
+{
+  "experiment": "FROG-002",
+  "date": "2026-09-06",
+  "target": "Mac Studio Watch",
+  "borrowed_capability": "KIJI WorldExperience question-scoped route selection",
+  "goal": "Choose the best source route by question type instead of searching every source equally.",
+  "current_facts": {
+    "official_release": "M5 Max / M5 Ultra Mac Studio announced 2026-08-25; Japan release 2026-09-22",
+    "official_price_jpy": {
+      "M5_Max_from": 419800,
+      "M5_Ultra_from": 949800
+    }
+  },
+  "routes": [
+    {
+      "question_kind": "spec_price_release",
+      "route": "apple_official",
+      "outcome": "succeeded",
+      "reason": "Authoritative for release date, price, configuration and claimed platform capability.",
+      "evidence": "https://www.apple.com/jp/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/"
+    },
+    {
+      "question_kind": "real_world_llm_agentic",
+      "route": "firsthand_community_benchmarks",
+      "outcome": "succeeded",
+      "reason": "Current firsthand reports expose prompt-processing, memory-fit, inference-engine and long-context issues that official material does not.",
+      "evidence": [
+        "https://www.reddit.com/r/MacStudio/comments/1w14dtr/mac_studio_llm_performance_tracker/",
+        "https://www.reddit.com/r/LocalLLaMA/comments/1vy3lsp/mac_studio_m5_max_cost_analysis/"
+      ]
+    },
+    {
+      "question_kind": "browser_ssd_sustained_system_performance",
+      "route": "independent_measurement_reviews",
+      "outcome": "partial",
+      "reason": "This is the correct route for Speedometer, SSD random/sustained I/O, thermals, power and long-duration load, but M5 Mac Studio launch-grade independent measurements are not yet established before the 2026-09-22 release.",
+      "retry_after": "2026-09-22"
+    },
+    {
+      "question_kind": "rental_availability_price",
+      "route": "rentio",
+      "outcome": "partial",
+      "reason": "Rentio currently exposes Apple M-series inventory and desktop categories, but no useful M5 Mac Studio listing was surfaced in the current check.",
+      "evidence": "https://www.rentio.jp/t/genre/pc/pcbody"
+    }
+  ],
+  "watch_policy": {
+    "spec_price_release": ["apple_official"],
+    "browser_ssd_sustained_system_performance": ["independent_measurement_reviews", "firsthand_community_benchmarks"],
+    "real_world_llm_agentic": ["firsthand_community_benchmarks", "independent_measurement_reviews"],
+    "rental_availability_price": ["rentio", "retail_market"],
+    "route_learning": "If a preferred route repeatedly returns no useful evidence or a recent failure/block occurs, demote it for that question kind and try an untried/alternate route. Do not create a universal source trust score."
+  },
+  "decision_relevance": [
+    "Browser automation responsiveness under many concurrent tabs/processes",
+    "SSD 4K random I/O and sustained write/read behavior",
+    "memory pressure and swap behavior",
+    "long-running thermal/performance stability and power draw",
+    "local LLM prompt processing / TTFT / model fit / agentic coding usability",
+    "Rentio or other low-commitment access path before purchase"
+  ]
+}
