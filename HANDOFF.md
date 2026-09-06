@@ -1,5 +1,7 @@
 # FROG Handoff — n8n validation
 
+> Historical/current experiment handoff for EXP004. Repository authority is defined by [`README.md`](README.md): **FROG is a MOMO-facing knowledge base and proposal channel only. FROG does not modify, supervise, or adopt decisions for MOMO. Adoption belongs to MOMO alone.**
+
 ## Current intent
 
 Validate whether **n8n can remove Human relay work** from the current autonomous system and materially improve efficiency and stability.
@@ -18,6 +20,8 @@ Its job is to:
 - remain professional and serious even when communication is casual.
 
 FROG must not confuse playfulness with carelessness.
+
+For repository/system authority, keep the boundary separate: SandFrog performs experiments; FROG retains distilled knowledge; MOMO alone decides adoption.
 
 ## Existing reality
 
