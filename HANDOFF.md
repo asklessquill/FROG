@@ -1,120 +1,181 @@
-# FROG Handoff — n8n validation
+# FROG Handoff — Human relay removal / autonomous return loop
 
-> Historical/current experiment handoff for EXP004. Repository authority is defined by [`README.md`](README.md): **FROG is a MOMO-facing knowledge base and proposal channel only. FROG does not modify, supervise, or adopt decisions for MOMO. Adoption belongs to MOMO alone.**
+> Current MOMO-facing handoff from FROG reality. Repository authority is defined by [`README.md`](README.md): **FROG is a knowledge base and proposal channel only. FROG does not modify, supervise, or adopt decisions for MOMO. Adoption belongs to MOMO alone.**
 
-## Current intent
+## Current validated reality
 
-Validate whether **n8n can remove Human relay work** from the current autonomous system and materially improve efficiency and stability.
+The original question was whether n8n could materially remove Human relay work rather than merely add another automation layer.
 
-The target is not "try n8n because it is popular." The target is to test whether it changes the operating model in a way comparable to how ChatGPT and Cursor changed Human work.
+That question now has a positive bounded answer.
 
-## FROG role
+A real SandFrog path has been proven:
 
-FROG / KAERU is a **Reality Mentor**.
+```text
+ChatGPT
+→ GitHub COMMAND
+→ n8n Schedule
+→ Actor Port
+→ cold Cursor CLI
+→ bounded repo work
+→ local commit
+→ durable Git return auth
+→ origin/main
+→ remote verification
+```
 
-Its job is to:
-- question project conventions when useful;
-- move from idea/design into reality extremely quickly;
-- choose speed, depth, and caution according to risk and reversibility;
-- judge success by real external effect or observation, not by internal artifacts;
-- remain professional and serious even when communication is casual.
+The Human authorized the work but did not courier the command into Cursor and did not press n8n Manual Execute for the standing Schedule proof.
 
-FROG must not confuse playfulness with carelessness.
+The most important result is therefore not "n8n works." It is:
 
-For repository/system authority, keep the boundary separate: SandFrog performs experiments; FROG retains distilled knowledge; MOMO alone decides adoption.
+> **Human judgment can remain while routine Human relay disappears.**
 
-## Existing reality
+## What n8n proved to be
 
-The Mac is already operated as an unmanned/kiosk-style machine.
+n8n was useful as **event / trigger / routing plumbing**.
 
-Human interaction is mainly through:
-- Windows -> SSH;
-- Tailscale remote connectivity;
-- automated operation / scheduled autonomous execution;
-- GitHub as durable recoverable state.
+It did not need to become:
 
-Raycast was rejected as low value because it mainly optimizes direct Human interaction with macOS, while this system is intentionally reducing direct GUI operation.
+- Supervisor;
+- source of truth;
+- task authority;
+- semantic owner;
+- application owner.
 
-Home Assistant remains interesting for a later physical-world phase, but is not the current priority.
+This distinction should be preserved if MOMO ever evaluates the pattern.
 
-## Why n8n is the current candidate
+```text
+Human    = purpose / authorization / stop boundary
+GitHub   = recoverable command + evidence + return plane
+n8n      = replaceable trigger / transport
+Actor    = bounded machine action surface
+AI       = bounded execution
+FROG     = retained learning / proposal
+MOMO     = decides adoption
+```
 
-The unresolved friction is not "how to control one Mac faster." It is that **Human still sometimes acts as the relay between systems**.
+## Reliability lesson
 
-Candidate change:
+The experiment series exposed a critical distinction between execution and delivery.
 
-`GitHub event -> n8n -> SSH / API action -> Cheater PC / Actor -> result -> GitHub -> Human only if needed`
+A cold Cursor task successfully executed and committed locally while Git return delivery failed. The correct response was **not** to rerun the AI task.
 
-If this works, the change is structural:
+The hardened semantics are:
 
-> Human stops being the message bus between applications.
+```text
+accepted
+→ running
+→ committed
+→ delivering
+→ done
+```
 
-## Architectural boundary
+with explicit side states such as:
 
-Do **not** turn n8n into a new Supervisor or source of truth.
+```text
+execution_failed
+delivery_failed
+human_required
+conflict
+```
 
-Keep responsibilities separate:
-- **Human** — final purpose / authority
-- **MOMO** — meaning, purpose, integrated interpretation
-- **KIBI** — semantic connection principles / protocol boundary
-- **Applications** — owning execution responsibilities
-- **GitHub** — durable recoverable state / handoff
-- **n8n** — event / transport / trigger plumbing
+The retained invariants are:
 
-n8n may wake, route, transform, and transport. It should not silently invent authority or replace Application ownership.
+```text
+execution success != delivery success
+delivery failure != permission to re-execute
+done == remote verified
+human_required / conflict remain latched until explicitly resolved or superseded
+```
 
-## First experiment
+The machine COMMAND itself is also a contract: required structure may fail closed before execution rather than being guessed from prose.
 
-**FROG Experiment 004 — Human relay removal with n8n**
+## Return authentication result
 
-Start with the smallest useful path:
+The final known EXP014 return-path debt was also closed.
 
-`GitHub -> n8n -> SSH -> Cheater PC -> GitHub`
+Steady-state return delivery no longer decrypts n8n credential storage or creates a token-bearing temporary askpass for every delivery. The tested Mac now uses a durable local GitHub credential-helper path with terminal prompting disabled.
 
-Do not add AI reasoning initially.
+In the tested headless session, macOS Keychain interaction was unavailable, so the proven credential mode is file-backed through the configured GitHub CLI helper under local permissions. This is a factual environment constraint, not a universal architecture recommendation.
 
-Purpose:
-1. detect one bounded GitHub event;
-2. trigger one safe/reversible command on the remote Mac;
-3. return one observable result to GitHub;
-4. verify dedupe / retry / failure behavior;
-5. determine whether this actually removes a Human relay step.
+## Additional reusable mechanisms recovered
 
-Only after the transport path proves useful and stable should KIBI gates, AI judgment, richer routing, or multi-Actor flows be inserted.
+A separate EXP015–020 campaign demonstrated that capability can be reused without inheriting the source system's authority.
 
-## Success criterion
+The resulting candidate Reality Loop Kit is:
 
-Experiment 004 is successful only if a real Human relay step disappears while recoverability and safety remain acceptable.
+```text
+project
+→ bound
+→ checkpoint
+→ decide
+→ verify capability
+→ observe
+```
 
-Creating a workflow diagram, config file, sample JSON, or toy script is **not** success by itself.
+It combines:
 
-Measure the real difference:
-- what Human had to do before;
-- what Human no longer has to do after;
-- whether failures are visible and recoverable;
-- whether duplicate triggers are controlled;
-- whether the resulting system is simpler or merely adds another layer.
+- deterministic derived views with provenance;
+- bounded execution authority;
+- durable restart checkpoints;
+- evidence-to-disposition without self-acceptance;
+- measured capability states;
+- read-only observation / drift detection.
 
-If n8n only adds complexity, mark it FAIL and remove it.
+These are implementation candidates only. None are MOMO rules unless MOMO explicitly adopts them.
 
-## Existing FROG experiments
+## Independent-review learning
 
-The repository currently contains:
-- `experiments/001-astra-review-route.json` — KIJI-style route learning applied to Astra review discovery;
-- `experiments/002-mac-studio-watch-route.json` — route-learning applied to Mac Studio monitoring;
-- `experiments/003-ai-subscription-portfolio-momo-view.json` — MOMO Human-scale projection applied to AI subscription allocation.
+Astra Ultra independently identified the execution/delivery weakness before it was reproduced in reality.
 
-Important lesson from the deleted original experiment 001: **FROG does not count an internally invented mechanism as a real-world experiment.** Use real capability, produce real effect, then retain evidence.
+The durable lesson is not to use the most expensive reasoning model everywhere. The better pattern is:
 
-## Next thread — first action
+```text
+recover evidence cheaply
+→ close exploration space
+→ give a narrow high-consequence decision to an independent high-reasoning reviewer
+→ test the finding in reality
+```
 
-Before building anything substantial:
-1. inspect the current Cheater PC / GitHub trigger path and identify one existing manual relay worth removing;
-2. check current n8n deployment options and security constraints;
-3. select the smallest reversible real event/action pair;
-4. execute Experiment 004 end-to-end;
-5. record the observed result in FROG only after reality has changed.
+Reasoning depth should be chosen after the Task is bounded.
 
-Do not begin by designing a generalized automation platform.
+## Knowledge Returns
+
+Current detailed returns:
+
+- [`experiments/2026-09-06-exp010-022-autonomous-return-loop.md`](experiments/2026-09-06-exp010-022-autonomous-return-loop.md)
+- [`experiments/2026-09-06-exp015-020-reusable-reality-loop.md`](experiments/2026-09-06-exp015-020-reusable-reality-loop.md)
+- [`experiments/2026-09-06-astra-bounded-independent-review.md`](experiments/2026-09-06-astra-bounded-independent-review.md)
+
+Earlier EXP005–008 Knowledge Returns remain historical evidence of the path that led here.
+
+## What is NOT claimed
+
+This handoff does **not** claim that:
+
+- MOMO has adopted the loop;
+- KIBI Protocol has ratified these transport semantics;
+- n8n is required or central architecture;
+- GitHub is a permanent protocol dependency;
+- SandFrog has authority over MOMO, KIBI, KIJI, INNU, SARU, or other Applications;
+- direct ChatGPT SaaS browser automation is production-ready;
+- every experimental mechanism should become a product feature.
+
+Transport choices remain replaceable. Authority stays explicit.
+
+## Candidate MOMO-facing question
+
+If MOMO chooses to evaluate this evidence, the useful question is not:
+
+> "Should MOMO use n8n?"
+
+It is:
+
+> **Which minimum semantics are required for Human-authorized, Human-relay-free work to remain recoverable, fail-closed, and semantically accountable across replaceable transports?**
+
+That question may later inform KIBI Protocol work, but FROG does not initiate or ratify that work.
+
+## FROG stance
+
+Keep turning ideas into enough reality to learn, then return only the durable lesson.
 
 **Make it real enough to learn.**
