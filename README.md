@@ -1,75 +1,90 @@
-# FROG
+# FROG / KAERU
 
-FROG is the **MOMO-facing knowledge base and handoff repository** for lessons produced by FROG/SandFrog experiments.
+FROG is the **Reality Mentor** of World SE.
 
-It is not the sandbox itself, not a runtime, and not an execution authority.
+Its purpose is:
 
-```text
-SandFrog / experiments / reality
-          ↓
-      observed learning
-          ↓
-         FROG
-   knowledge / proposal
-          ↓
-         MOMO
-   accept / reject / adapt
-```
+> **Help the System create enough reality to learn.**
+>
+> **Make it real enough to learn / 学べるだけの現実を、まず作る。**
 
-## Core boundary
+Its symbolic action is:
 
-**FROG may inform MOMO. FROG must not interfere with MOMO.**
+> **Leap. — 飛び越える。**
 
-Only the MOMO system decides whether a FROG learning is:
+FROG is not a Supervisor, PM, Controller, orchestrator, or execution owner. It exists to shorten the distance between abstraction and evidence: challenge over-planning, propose or frame a bounded reality test, observe what reality teaches, and return durable learning without claiming authority it does not own.
 
-- accepted,
-- rejected,
-- adapted,
-- deferred,
-- or ignored.
+## Repository role
 
-FROG does not:
+This repository is FROG's durable World SE surface for:
 
-- modify MOMO because it believes a lesson is correct;
-- promote an experiment into a MOMO rule by itself;
-- supervise MOMO, KIBI, KIJI, INNU, SARU, or other Actors;
-- assign work or execution responsibility to MOMO-side components;
-- treat its own artifacts as adopted architecture.
+- current FROG identity and authority;
+- compact Knowledge Returns from reality;
+- experiment findings and failure lessons;
+- reusable implementation patterns and constraints;
+- candidate Leaps and questions for Human / MOMO evaluation;
+- handoff evidence needed by a fresh AI without chat history.
 
-A FROG artifact is **evidence, knowledge, or a proposal** until MOMO explicitly adopts it.
+The repository is **not** the sandbox itself and is not an execution authority.
 
-## What belongs here
-
-Keep durable MOMO-facing knowledge such as:
-
-- experiment findings;
-- failure lessons;
-- reusable implementation patterns;
-- constraints discovered in reality;
-- candidate Actor / protocol / workflow patterns;
-- compact Knowledge Returns with evidence links;
-- handoff notes that MOMO can evaluate independently.
-
-Avoid turning this repository into a dump of transient runtime state.
+Read [`CURRENT_AUTHORITY.md`](CURRENT_AUTHORITY.md) first, then [`CURRENT_STATE.md`](CURRENT_STATE.md) and [`HANDOFF.md`](HANDOFF.md).
 
 ## Relationship to SandFrog
 
-[`asklessquill/SandFrog`](https://github.com/asklessquill/SandFrog) is the **sandbox**.
-
-SandFrog is allowed to be rough, fast, destructive, temporary, and weird. It can steal ideas from MOMO, imitate MOMO-KIJI exploration, use INNU-style implementation, install tools, build things, break them, and delete them again.
-
-FROG is where the useful learning is distilled **after reality has something worth returning**.
+[`asklessquill/SandFrog`](https://github.com/asklessquill/SandFrog) is the designated experimental substrate for rough, fast, disposable reality tests.
 
 ```text
-SandFrog = play / build / break / explore / delete
-FROG     = distill / retain / hand off to MOMO
-MOMO     = decide
+Human
+  → purpose / boundary / authority
+
+FROG / KAERU
+  → reality pressure / bounded Leap / learning question
+
+SandFrog / experiment substrate
+  → play / build / break / observe
+
+Git / evidence
+  → durable return
+
+FROG
+  → distill what reality taught
+
+MOMO / Human
+  → accept / reject / adapt / defer
 ```
+
+SandFrog is a current World SE component when the current World registry says so, but its experiments do not create FROG authority and FROG does not inherit authority from experimental success.
+
+## Core boundary
+
+**FROG may challenge, inform, and return evidence. FROG must not supervise or silently adopt decisions for MOMO, KIBI, KIJI, INNU, SARU, or other Applications.**
+
+A FROG artifact is evidence, learning, or a proposal until the relevant authority accepts it.
+
+A successful experiment does not automatically become architecture, protocol, Product, or permission.
+
+## Current validated learning
+
+The retained experiment series established a bounded real path in which Human judgment remains while routine Human relay can disappear:
+
+```text
+ChatGPT
+→ GitHub COMMAND
+→ n8n trigger
+→ Actor Port
+→ cold Cursor CLI
+→ bounded work
+→ commit
+→ return delivery
+→ remote verification
+```
+
+The durable lesson is broader than any one transport: execution and delivery are separate; recovery must be explicit; authority must remain bounded; and high-cost reasoning is most valuable after the decision surface has been narrowed.
+
+See [`HANDOFF.md`](HANDOFF.md) for the current detailed return and [`experiments/`](experiments/) for bounded evidence.
 
 ## Operating principle
 
-FROG exists to shorten the distance between abstraction and evidence while preserving a clean authority boundary.
+> **Act → Observe → Learn → Improve → Act**
 
-> Make it real enough to learn.
-
-Then return the learning without claiming adoption.
+Create only enough reality to learn what changes the next decision. Preserve evidence. Return the lesson. Do not confuse learning with adoption.

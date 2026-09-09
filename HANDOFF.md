@@ -1,6 +1,6 @@
 # FROG Handoff — Human relay removal / autonomous return loop
 
-> Current MOMO-facing handoff from FROG reality. Repository authority is defined by [`README.md`](README.md): **FROG is a knowledge base and proposal channel only. FROG does not modify, supervise, or adopt decisions for MOMO. Adoption belongs to MOMO alone.**
+> Current durable return from FROG reality. Repository authority is defined by [`CURRENT_AUTHORITY.md`](CURRENT_AUTHORITY.md). FROG / KAERU is the **Reality Mentor**; this repository is its durable knowledge / evidence / handoff surface. FROG does not supervise, modify, or self-adopt decisions for MOMO or other Applications.
 
 ## Current validated reality
 
@@ -41,15 +41,13 @@ It did not need to become:
 - semantic owner;
 - application owner.
 
-This distinction should be preserved if MOMO ever evaluates the pattern.
-
 ```text
 Human    = purpose / authorization / stop boundary
 GitHub   = recoverable command + evidence + return plane
 n8n      = replaceable trigger / transport
 Actor    = bounded machine action surface
 AI       = bounded execution
-FROG     = retained learning / proposal
+FROG     = Reality Mentor / retained learning / proposal
 MOMO     = decides adoption
 ```
 
@@ -78,7 +76,7 @@ human_required
 conflict
 ```
 
-The retained invariants are:
+Retained invariants:
 
 ```text
 execution success != delivery success
@@ -91,17 +89,17 @@ The machine COMMAND itself is also a contract: required structure may fail close
 
 ## Return authentication result
 
-The final known EXP014 return-path debt was also closed.
+The EXP014 return-path debt was closed.
 
-Steady-state return delivery no longer decrypts n8n credential storage or creates a token-bearing temporary askpass for every delivery. The tested Mac now uses a durable local GitHub credential-helper path with terminal prompting disabled.
+Steady-state return delivery no longer needed to decrypt n8n credential storage or create a token-bearing temporary askpass for each delivery. In the tested headless Mac environment, the proven route used a durable local GitHub credential-helper path with terminal prompting disabled.
 
-In the tested headless session, macOS Keychain interaction was unavailable, so the proven credential mode is file-backed through the configured GitHub CLI helper under local permissions. This is a factual environment constraint, not a universal architecture recommendation.
+That is an environment-specific fact, not permanent World SE architecture.
 
-## Additional reusable mechanisms recovered
+## Reusable reality-loop learning
 
 A separate EXP015–020 campaign demonstrated that capability can be reused without inheriting the source system's authority.
 
-The resulting candidate Reality Loop Kit is:
+The candidate Reality Loop Kit was:
 
 ```text
 project
@@ -112,7 +110,7 @@ project
 → observe
 ```
 
-It combines:
+It combined:
 
 - deterministic derived views with provenance;
 - bounded execution authority;
@@ -121,13 +119,13 @@ It combines:
 - measured capability states;
 - read-only observation / drift detection.
 
-These are implementation candidates only. None are MOMO rules unless MOMO explicitly adopts them.
+These remain implementation candidates / evidence. None automatically become MOMO or KIBI rules.
 
 ## Independent-review learning
 
 Astra Ultra independently identified the execution/delivery weakness before it was reproduced in reality.
 
-The durable lesson is not to use the most expensive reasoning model everywhere. The better pattern is:
+The durable lesson is not to use the most expensive reasoning model everywhere. The stronger pattern is:
 
 ```text
 recover evidence cheaply
@@ -158,7 +156,8 @@ This handoff does **not** claim that:
 - GitHub is a permanent protocol dependency;
 - SandFrog has authority over MOMO, KIBI, KIJI, INNU, SARU, or other Applications;
 - direct ChatGPT SaaS browser automation is production-ready;
-- every experimental mechanism should become a product feature.
+- every experimental mechanism should become a product feature;
+- this consolidation authorizes another experiment.
 
 Transport choices remain replaceable. Authority stays explicit.
 
@@ -176,6 +175,6 @@ That question may later inform KIBI Protocol work, but FROG does not initiate or
 
 ## FROG stance
 
-Keep turning ideas into enough reality to learn, then return only the durable lesson.
+**Leap.** Create enough reality to learn, observe what changed, and return only the durable lesson.
 
-**Make it real enough to learn.**
+> **Make it real enough to learn.**
